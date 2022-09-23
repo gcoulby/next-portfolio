@@ -1,0 +1,33 @@
+{
+  "name": "portfolio-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 8080",
+    "build": "next build",
+    "build-static": "next build && next export && npm run build-static-repair-index",
+    "build-static-repair-index": "replace-in-files --string \"/_next/static\" --replacement \"./_next/static\" out/index.html",
+    "start": "next start -p 9010",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-brands-svg-icons": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@iconify/react": "^4.0.0",
+    "bootstrap": "^5.2.1",
+    "font-awesome": "^4.7.0",
+    "next": "12.3.1",
+    "react": "18.2.0",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
+    "react-dom": "18.2.0",
+    "replace-in-files-cli": "^2.0.0",
+    "typed.js": "^2.0.12",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "eslint": "8.23.1",
+    "eslint-config-next": "12.3.1"
+  }
+}
